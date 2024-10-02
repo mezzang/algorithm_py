@@ -1,15 +1,14 @@
-from bisect import bisect_left
-
-def lis(n,S):
+def lis(n,A):
     dp = [1]*n
     choices = [-1]*n
     for i in range(n-1,-1,-1):
         for j in range(i+1, n):
-            if S[i] < S[j]:
+            if A[i] < A[j]:
                 if dp[i] < dp[j]+1:
                     dp[i] = dp[j] + 1
                     choices[i] = j
     return max(dp), choices
+
 
 
 def reconstruct(start):
