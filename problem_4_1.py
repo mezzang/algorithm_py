@@ -10,5 +10,5 @@ for _ in range(int (input())):
     n = int(input())
     T = [list(map(int, input().split())) for _ in range(n)]
     print(trianglepath(0,0))
-
+  
     
